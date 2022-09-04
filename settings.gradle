@@ -1,0 +1,3 @@
+rootProject.name = "ProxyDemo"
+include ':app'
+include ':lib'
