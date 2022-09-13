@@ -26,6 +26,7 @@ public class AIDLTestActivity extends AppCompatActivity {
     private ServiceConnection connection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
+            //客户端通过获取到的Stub对象，创建远程的代理对象Stub.Proxy。
             binder = IBookInterface.Stub.asInterface(service);
         }
 

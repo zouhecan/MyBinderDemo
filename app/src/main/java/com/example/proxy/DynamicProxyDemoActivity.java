@@ -26,12 +26,11 @@ public class DynamicProxyDemoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         DynamicProxyDemo proxy = new DynamicProxyDemo();
-        setContentView(R.layout.activity_dynamic_proxy_layout);
         content = findViewById(R.id.content);
         content.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               if (status == Status.SUBMIT) {
+                if (status == Status.SUBMIT) {
                     content.setText("提交诉讼：给我发的钱太少了");
                     proxy.submit();
                     status = Status.BURDEN;
