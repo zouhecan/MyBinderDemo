@@ -13,8 +13,11 @@ import com.example.proxy.R;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 public class MainActivity extends AppCompatActivity {
+    private Unbinder unbinder;
+
     @BindView(R.id.proxyBtn)
     Button proxyBtn;
 
@@ -22,27 +25,35 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+        unbinder = ButterKnife.bind(this);
         proxyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, DynamicProxyDemoActivity.class);
-                startActivity(intent);
+                jump(DynamicProxyDemoActivity.class);
             }
         });
         findViewById(R.id.binderBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, BinderClientActivity.class);
-                startActivity(intent);
+                jump(BinderClientActivity.class);
             }
         });
         findViewById(R.id.aidlBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AIDLTestActivity.class);
-                startActivity(intent);
+                jump(AIDLTestActivity.class);
             }
         });
+    }
+
+    public void jump(Class clazz) {
+        Intent intent = new Intent(MainActivity.this, clazz);
+        startActivity(intent);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
     }
 }

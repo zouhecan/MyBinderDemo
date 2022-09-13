@@ -8,9 +8,9 @@
 
     <Button
         android:id="@+id/proxyBtn"
-        android:layout_width="110dp"
+        android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:text="Proxy demo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -18,20 +18,19 @@
 
     <Button
         android:id="@+id/binderBtn"
-        android:layout_width="110dp"
+        android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginStart="20dp"
         android:text="Binder demo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/aidlBtn"
-        app:layout_constraintStart_toEndOf="@+id/proxyBtn" />
+        app:layout_constraintStart_toEndOf="@+id/proxyBtn"/>
 
     <Button
         android:id="@+id/aidlBtn"
-        android:layout_width="110dp"
+        android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="10dp"
         android:text="AIDL demo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,10 +1,5 @@
 package com.example.lib.annotation;
 
-/**
- * desc:
- * author: zouhecan {hc.zou@trip.com}
- * date: 2022/9/13
- */
 public class TestModel {
     @MyField(description = "姓名")
     private String name;

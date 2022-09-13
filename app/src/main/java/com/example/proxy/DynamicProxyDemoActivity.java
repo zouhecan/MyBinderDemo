@@ -11,9 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * date: 2022/9/1
  */
 public class DynamicProxyDemoActivity extends AppCompatActivity {
-
     private Status status = Status.SUBMIT;
-    Button content;
 
     enum Status {
         SUBMIT,
@@ -26,7 +24,8 @@ public class DynamicProxyDemoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         DynamicProxyDemo proxy = new DynamicProxyDemo();
-        content = findViewById(R.id.content);
+        setContentView(R.layout.activity_dynamic_proxy_layout);
+        Button content = findViewById(R.id.content);
         content.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
