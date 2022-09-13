@@ -1,4 +1,4 @@
-package com.example.lib;
+package com.example.lib.proxy;
 
 public class MySalaryApply implements ISalaryApply{
     @Override

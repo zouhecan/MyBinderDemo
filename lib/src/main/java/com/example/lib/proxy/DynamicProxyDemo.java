@@ -1,4 +1,4 @@
-package com.example.lib;
+package com.example.lib.proxy;
 
 import java.lang.reflect.Proxy;
 

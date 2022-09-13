@@ -1,4 +1,4 @@
-package com.example.lib;
+package com.example.lib.proxy;
 
 public interface ISalaryApply {
 

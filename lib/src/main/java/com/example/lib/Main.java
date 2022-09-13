@@ -1,7 +1,10 @@
 package com.example.lib;
 
-class Main {
+import com.example.lib.annotation.TestBusiness;
+
+public class Main {
     public static void main(String[] args) {
-        new DynamicProxyDemo().startApply();
+//        new DynamicProxyDemo().startApply();
+        new TestBusiness().handleData();
     }
 }
