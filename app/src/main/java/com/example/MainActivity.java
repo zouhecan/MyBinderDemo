@@ -2,6 +2,7 @@ package com.example;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -47,8 +48,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void jump(Class clazz) {
+        reportName(clazz);
         Intent intent = new Intent(MainActivity.this, clazz);
         startActivity(intent);
+    }
+
+    private void reportName(Class clazz) {
+        Log.d("JumpAspect", "来着留名" + clazz.getCanonicalName());
     }
 
     @Override
